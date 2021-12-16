@@ -1,6 +1,5 @@
 package com.betulsahin.mediumdashboard.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,7 +7,6 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class Login{
 
@@ -21,4 +19,9 @@ public class Login{
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    public Login(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 }
